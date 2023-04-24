@@ -1,6 +1,6 @@
 import config from "./config.js"
 
-    function getApiData(done){
+    export default function getApiData(done){
         const results = fetch(`${config.api.url}`);
         results
             .then(response => response.json())
@@ -14,6 +14,7 @@ import config from "./config.js"
 
     getApiData(data =>{
         const articles = [];
+        console.log(data.results)
         data.results.forEach(personaje => {
             const article = document.createRange().createContextualFragment(/* html */
             `
@@ -21,7 +22,7 @@ import config from "./config.js"
                 <div class="img">       
                     <img src="${personaje.image}" alt="" srcset="">
                 </div>
-                <h2 class="articulo">${personaje.name}</h2>
+                <h2 class="articulo py-3">${personaje.name}</h2>
                 <div class="py-2">
                     <p><i class="bi bi-life-preserver"></i>${personaje.status}</p>
                     <p><i class="bi bi-gender-ambiguous"></i>${personaje.gender}</p>
@@ -37,6 +38,4 @@ import config from "./config.js"
         });
     })
     
-    export default{
-        getApiData
-    };
+ 
