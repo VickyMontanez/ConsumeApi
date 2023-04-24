@@ -10,7 +10,11 @@ main{
 article{
     border: 1px solid #00000054;
     border-radius: 5px;
-    width: 300px;
+    width: 350px;
     padding: 20px;
     margin: 10px;
+}
+
+.filtro{
+    display: none;
 }
