@@ -1,4 +1,3 @@
-
 import config from "./config.js"
 
     function getApiData(done){
@@ -14,6 +13,7 @@ import config from "./config.js"
     };
 
     getApiData(data =>{
+        const articles = [];
         data.results.forEach(personaje => {
             const article = document.createRange().createContextualFragment(/* html */
             `
@@ -21,22 +21,22 @@ import config from "./config.js"
                 <div class="img">       
                     <img src="${personaje.image}" alt="" srcset="">
                 </div>
-                <h2>${personaje.name}</h2>
-                <span>${personaje.status}</span>
-                <p>${personaje.gender}</p>
-                <p>${personaje.species}</p>
-                <p>${personaje.location.name}</p>
+                <h2 class="articulo">${personaje.name}</h2>
+                <div class="py-2">
+                    <p><i class="bi bi-life-preserver"></i>${personaje.status}</p>
+                    <p><i class="bi bi-gender-ambiguous"></i>${personaje.gender}</p>
+                    <p><i class="bi bi-caret-right-fill"></i>${personaje.species}</p>
+                    <p><i class="bi bi-geo-alt-fill"></i>${personaje.location.name}</p>
+                </div>
             </article>
             `)
+        
+        articles.push(article);
         const main = document.querySelector("main");
         main.append(article);
         });
-    });
-
-    self.addEventListener("message",(e)=>{
-        postMessage(wsMyContent[e.data.module](e.data.data.results));
-    });
-
+    })
+    
     export default{
         getApiData
     };
