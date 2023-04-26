@@ -1,4 +1,5 @@
-import api from "../API/api.js"
+import api from "../API/api.js";
+
 let wsMyContent = {
     async wsShowApi(){
         const data = await api.getApi();
@@ -38,7 +39,7 @@ let wsMyContent = {
 
     async createBotones(){
         let dataPage = await api.getByPage();
-        const numPages =dataPage.info.pages;
+        const numPages = dataPage.info.pages;
         let botones = '';
         for(let i = 1; i <=numPages ; i++){
             botones += `<button class="pagebtn" onclick="window.location.href='?page=${i}'">${i}</button>`
@@ -46,26 +47,6 @@ let wsMyContent = {
         return botones
     },
 
-    async createTemplate(num){
-        let dataPage = await api.getByPage(num);
-        let response = dataPage.info.pages
-        let templatePages ='';
-        for (let i = 1; i <= response; i++) {
-            response.forEach(personaje => {
-              templatePages += `<article>
-                <div class="img">       
-                    <img src="${personaje.image}" alt="" srcset="">
-                </div>
-                <h2>${personaje.name}</h2>
-                <span>${personaje.status}</span>
-                <p>${personaje.gender}</p>
-                <p>${personaje.species}</p>
-                <p>${personaje.location.name}</p>
-              </article>` 
-            });
-        };
-        return templatePages;
-    }
 };
 
 self.addEventListener("message", async (e) => {

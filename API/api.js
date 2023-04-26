@@ -34,7 +34,7 @@ const getByName = async(name)=>{
 /* Se obtiene la data de los personajes por su page*/
 const getByPage = async(page)=>{
     try{
-        const data = await fetch(`"https://rickandmortyapi.com/api/character/?page=${page}`);
+        const data = await fetch(`https://rickandmortyapi.com/api/character/?page=${page}`);
         const results = await data.json();
         return results
     }catch(error){
