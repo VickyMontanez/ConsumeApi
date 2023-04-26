@@ -24,17 +24,34 @@ export default{
         });
     },
 
-    botones(){
+/*     Select(){
         const wsbtn = new Worker ("./storage/wsMyContent.js", {type: "module"});
         wsbtn.addEventListener("message", (e)=>{
-            const containerbtn = document.querySelector("#containerbtn");
-            containerbtn.innerHTML="";
-            containerbtn.insertAdjacentHTML("beforeend", e.data);
+            const select =document.querySelector("#containerSelect");
+            select.innerHTML="";
+            select.insertAdjacentHTML("beforeend", e.data);
         });
-        wsbtn.postMessage({module:"createBotones"});
-        wsbtn.addEventListener("onclick", (e)=>{
-            document.querySelector(".pagebtn");
-            alert("funciona")
+        wsbtn.postMessage({module:"createSelect"});
+    }, */
+
+
+
+/*     let number=1;
+    myComponent.mostrarData(number);
+    select.addEventListener("change", (e)=>{
+        number= e.target.value;
+        myComponent.mostrarData(number);
+    })
+ */
+
+    funcBotones(){
+        const boton = document.querySelectorAll(".pagebtn")
+        let number=1;
+        myComponent.mostrarData(number);
+        boton.addEventListener("click", (e)=>{
+            number= e.target.value;
+            myComponent.mostrarData(number);
+            alert("QAAAAAAAAAAAAAA")
         })
-    },
+    }
 };

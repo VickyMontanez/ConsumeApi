@@ -9,8 +9,8 @@ let wsMyContent = {
             <div class="img">       
                 <img src="${personaje.image}" alt="" srcset="">
             </div>
-            <h2>${personaje.name}</h2>
-            <span>${personaje.status}</span>
+            <h2 class="my-3">${personaje.name}</h2>
+            <p>${personaje.status}</p>
             <p>${personaje.gender}</p>
             <p>${personaje.species}</p>
             <p>${personaje.location.name}</p>
@@ -27,8 +27,8 @@ let wsMyContent = {
             <div class="img">       
                 <img src="${personaje.image}" alt="" srcset="">
             </div>
-            <h2>${personaje.name}</h2>
-            <span>${personaje.status}</span>
+            <h2 class="my-3">${personaje.name}</h2>
+            <p>${personaje.status}</p>
             <p>${personaje.gender}</p>
             <p>${personaje.species}</p>
             <p>${personaje.location.name}</p>
@@ -37,15 +37,16 @@ let wsMyContent = {
         return templateListSearch;
     },
 
-    async createBotones(){
+
+/*     async createSelect(number){
         let dataPage = await api.getByPage();
         const numPages = dataPage.info.pages;
-        let botones = '';
-        for(let i = 1; i <=numPages ; i++){
-            botones += `<button class="pagebtn" onclick="window.location.href='?page=${i}'">${i}</button>`
+        let select = '';
+        for(let i = 1; i <= numPages ; i++){
+            select += `<option value="${i}">${i}</option>`
         };
-        return botones
-    },
+        return select
+    }, */
 
 };
 
