@@ -37,17 +37,6 @@ let wsMyContent = {
         return templateListSearch;
     },
 
-
-/*     async createSelect(number){
-        let dataPage = await api.getByPage();
-        const numPages = dataPage.info.pages;
-        let select = '';
-        for(let i = 1; i <= numPages ; i++){
-            select += `<option value="${i}">${i}</option>`
-        };
-        return select
-    }, */
-
 };
 
 self.addEventListener("message", async (e) => {
