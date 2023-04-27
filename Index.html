@@ -12,22 +12,43 @@
     <!-- Link CSS -->
     <link rel="stylesheet" href="./style.css" async>
     <!-- Link JavaScript -->
+    <script src="./main.js" defer type="module"></script>
     <title>Document</title>
 </head>
 <body>
     <header class="d-flex align-items-center justify-content-around">
-        <div class="d-flex justify-content-column">
-            <h1 class="text-white font-weight-bold text-uppercase">Api Comsume Rick and Morty</h1>
-            <nav>
-                <input id="searchField" type="text" name="search" id="search" placeholder="Buscar...">
-            </nav>
-            <nav id="containerSelect">
-            </nav>
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col" style="text-align: center;">
+                    <h1 class="text-uppercase">Api Comsume Rick and Morty</h1>
+                </div>
+            </div>
+            <div class="row" style="margin-top: 20px;">
+                <div class="col-4"></div>
+                <div class="col-4" style="text-align: center;">
+                    <input id="searchField" type="text" class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+                </div>
+                <div class="col-4"></div>
+            </div>
+            <div class="row" style="margin-top: 20px;">
+                <div class="col">                    
+                    <nav aria-label="API Pagination">
+                        <ul id="pagesContainer1" class="pagination justify-content-center">
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col">                    
+                    <nav aria-label="API Pagination">
+                        <ul id="pagesContainer2" class="pagination justify-content-center">
+                        </ul>
+                    </nav>
+                </div>
+            </div>
         </div>
     </header>
     <main id="main" class="d-flex justify-content-center">
     </main>
-
-    <script src="./main.js" defer type="module"></script>
 </body>
 </html>
