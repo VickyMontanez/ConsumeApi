@@ -1,39 +1,70 @@
+@font-face {
+    font-family: "schwifty";
+    src: url(./fonts/get_schwifty.ttf);
+}
+
 body{
-    background-color: black;
+    background-image: url(./img/fondo.jfif);
 }
 main{
     display: flex;
     flex-wrap: wrap;
 }
-.img img{
+
+img{
     width:300px;
     height: 300px;
-    border-radius: 8px;
+    border: 4px solid  #1A4D2E;
+}
+
+.img{
+    width:300px;
+    height: 300px;
+}
+
+nav{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;  
 }
 
 article{
     border: 1px solid #00000054;
     border-radius: 5px;
     width: 350px;
-    padding: 20px;
+    padding: 10px;
     margin: 10px;
-    box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.479);
-    background-color: white;
+    box-shadow: 5px 4px 3px 2px rgba(0, 0, 0, 0.795);
+    background-color: #45973f;
 }
 
-.filtro{
-    display: none;
-}
 
 header{
     display: flex;
     flex-wrap: wrap;
-    background-image: url(./img/wp6360955.jpg);
-    height: 300px;
+    background-color: black;
     background-position: center;
+    padding: 40px;
 }
 
 h1{
     letter-spacing: 10px;
-    font-size: 40px;
+    font-family: "schwifty";
+    font-size: 60px;
+    color: #5BD1D7;
+    text-shadow: 2px 5px 5px 2px white;
+}
+
+.content{
+    background-color: #4faf4871;
+    padding: 15px;
+    border-radius: 5px;
+}
+
+.info{
+    background-color: #6ce66334;
+    padding: 15px;
+    border-radius: 5px;
+    font-family: "schwifty"
 }
